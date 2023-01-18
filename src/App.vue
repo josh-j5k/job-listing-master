@@ -68,7 +68,8 @@ export default defineComponent({
     },
 
     async loadData(): Promise<any> {
-      let res = await fetch("http://localhost:3000/listings");
+      // let res = await fetch("http://localhost:3000/listings");
+      let res = await fetch("../data.json");
       const data = await res.json();
       return data;
     },
@@ -94,13 +95,6 @@ export default defineComponent({
             this.Filter = true;
             return arr;
           }
-          // for (const val of arr) {
-          //   if (val == arrLenght[0]) {
-          //     this.Filter = true;
-
-          //     return val;
-          //   }
-          // }
         });
       } else if (arrLenght.length > 1 && arrLenght.length < 3) {
         return listings.filter((listing: any) => {
