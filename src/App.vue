@@ -69,7 +69,7 @@ export default defineComponent({
 
     async loadData() {
       // let res = await fetch("http://localhost:3000/listings");
-      let res = await fetch("../data.json");
+      let res = await fetch("./data.json");
       const data = await res.json();
       return data;
     },
