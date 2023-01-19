@@ -67,7 +67,7 @@ export default defineComponent({
       }
     },
 
-    async loadData(): Promise<any> {
+    async loadData() {
       // let res = await fetch("http://localhost:3000/listings");
       let res = await fetch("../data.json");
       const data = await res.json();
